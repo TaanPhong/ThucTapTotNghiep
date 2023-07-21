@@ -1,0 +1,32 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.PromotionConvert;
+import com.trantanphong.dto.PromotionDetailDTO;
+import com.trantanphong.repository.PromotionDetailRepository;
+import com.trantanphong.service.PromotionDetailService;
+
+public class PromotionDetailServiceImplement implements PromotionDetailService{
+
+	@Autowired
+	private PromotionDetailRepository promotionDetailRepository;
+	
+	@Autowired
+	private PromotionConvert promotionConvert;
+	
+	@Override
+	public List<PromotionDetailDTO> getAllPromotionDetail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PromotionDetailDTO save(PromotionDetailDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

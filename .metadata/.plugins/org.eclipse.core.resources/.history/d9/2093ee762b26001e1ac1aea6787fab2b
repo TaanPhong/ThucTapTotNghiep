@@ -1,0 +1,38 @@
+package com.trantanphong.service.implement;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.TheOrderDetailConvert;
+import com.trantanphong.dto.TheOrderDetailDTO;
+import com.trantanphong.entity.TheOrderDetail;
+import com.trantanphong.repository.TheOrderDetailReposiotry;
+import com.trantanphong.service.TheOrderDetailService;
+
+public class TheOrderDetailServiceImplement implements TheOrderDetailService{
+
+	@Autowired
+	private TheOrderDetailReposiotry theOrderDetailReposiotry;
+	@Autowired
+	private TheOrderDetailConvert theOrderDetailConvert;
+	
+	@Override
+	public List<TheOrderDetailDTO> getAllOrderDetail() {
+		// TODO Auto-generated method stub
+		List<TheOrderDetailDTO> theOrderDetailDTOs = new ArrayList<TheOrderDetailDTO>();
+		List<TheOrderDetail> theOrderDetails = theOrderDetailReposiotry.findAll();
+		for (TheOrderDetail theOrderDetail : theOrderDetails) {
+			theOrderDetailDTOs.add(theOrderDetailConvert.toDTO(theOrderDetail));
+		}
+		return theOrderDetailDTOs;
+	}
+
+	@Override
+	public TheOrderDetailDTO save(TheOrderDetailDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

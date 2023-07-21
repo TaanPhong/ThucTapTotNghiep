@@ -1,0 +1,12 @@
+package com.trantanphong.dto;
+
+import javax.persistence.Column;
+
+public class CustomerDTO {
+	private Long id;
+	private String fullname;
+	private String email;
+	private String numberPhone;
+	private String location;
+	private String dayOfBirth;
+}

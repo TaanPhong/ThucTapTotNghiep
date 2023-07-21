@@ -1,0 +1,8 @@
+package com.trantanphong.dto;
+
+public class ReceiptDetailDTO {
+	private Long goodReceiptNoteId;
+	private Long productId;
+	private int numberOf;
+	private int price;
+}

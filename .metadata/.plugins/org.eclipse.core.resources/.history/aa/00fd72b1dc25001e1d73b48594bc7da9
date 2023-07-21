@@ -1,0 +1,20 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.ProductDTO;
+import com.trantanphong.entity.Product;
+
+@Component
+public class ProductConvert {
+	public Product toEntity(ProductDTO dto)
+	{
+		Product entity = new Product();
+		entity.setId(dto.getId());
+		entity.setNameProduct(dto.getNameProduct());
+		entity.setStatus(dto.getStatus());
+		entity.setNumber_of(0);
+		entity.setDescription(dto.getDescription());
+		return entity;
+	}
+}

@@ -1,0 +1,29 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.StatusOrderDTO;
+import com.trantanphong.entity.StatusOrder;
+
+@Component
+public class StatusOrderConvert {
+	public StatusOrder toEntity(StatusOrderDTO dto) {
+		StatusOrder entity = new StatusOrder();
+		entity.setId(dto.getId());
+		entity.setNameStatus(dto.getNameStatus());
+		return entity;
+	}
+
+	public StatusOrder toEntity(StatusOrderDTO dto, StatusOrder entity) {
+		entity.setId(dto.getId());
+		entity.setNameStatus(dto.getNameStatus());
+		return entity;
+	}
+
+	public StatusOrderDTO toDTO(StatusOrder entity) {
+		StatusOrderDTO dto = new StatusOrderDTO();
+		dto.setId(entity.getId());
+		dto.setNameStatus(entity.getNameStatus());
+		return dto;
+	}
+}

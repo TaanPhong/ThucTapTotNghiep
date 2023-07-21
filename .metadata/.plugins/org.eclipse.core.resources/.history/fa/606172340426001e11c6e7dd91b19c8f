@@ -1,0 +1,8 @@
+package com.trantanphong.dto;
+
+import javax.persistence.Column;
+
+public class DecentralizationDTO {
+	private Long id;
+	private String authorizedName;
+}

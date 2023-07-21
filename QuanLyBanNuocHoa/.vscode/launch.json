@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<QuanLyBanNuocHoa>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.trantanphong.Application",
+            "projectName": "QuanLyBanNuocHoa",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

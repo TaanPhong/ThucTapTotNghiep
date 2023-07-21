@@ -1,0 +1,21 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.StaffDTO;
+import com.trantanphong.entity.Staff;
+
+@Component
+public class StaffConvert {
+	public Staff toEntity(StaffDTO dto) {
+		Staff entity = new Staff();
+		entity.setId(dto.getId());
+		entity.setFirstyName(dto.getFirstName());
+		entity.setLastName(dto.getLastName());
+		entity.setNumberPhone(dto.getNumberPhone());
+		entity.setLocation(dto.getLocation());
+		entity.setDayOfBirth(dto.getDayOfBirth());
+		entity.setCitizenID(dto.getCitizenID());
+		entity.setStatus(dto.getStatus());
+	}
+}

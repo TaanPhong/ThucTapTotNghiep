@@ -1,0 +1,10 @@
+package com.trantanphong.convert;
+
+import com.trantanphong.dto.PictureProductDTO;
+import com.trantanphong.entity.*;
+
+public class PrictureProductConvent {
+	public PictureProduct toEntity(PictureProductDTO dto) {
+		PictureProduct
+	}
+}

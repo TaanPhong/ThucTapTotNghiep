@@ -1,0 +1,21 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.TypeProductDTO;
+import com.trantanphong.entity.TypeProduct;
+
+@Component
+public class TypeProductConvent {
+	public TypeProduct toEntity(TypeProductDTO dto) {
+		TypeProduct entity = new TypeProduct();
+		return entity;
+	}
+	public TypeProduct toEntity(TypeProductDTO dto, TypeProduct entity) {
+		return entity;
+	}
+	public TypeProductDTO toDTO(TypeProduct entity) {
+		TypeProductDTO dto = new TypeProductDTO();
+		return dto;
+	}
+}

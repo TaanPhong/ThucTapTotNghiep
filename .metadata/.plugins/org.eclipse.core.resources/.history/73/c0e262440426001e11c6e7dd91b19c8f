@@ -1,0 +1,6 @@
+package com.trantanphong.dto;
+
+public class DecentralizationDTO {
+	private Long id;
+	private String authorizedName;
+}

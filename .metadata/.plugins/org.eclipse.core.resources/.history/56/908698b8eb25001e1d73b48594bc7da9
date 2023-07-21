@@ -1,0 +1,39 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.CustomerConvert;
+import com.trantanphong.convert.CustomerTypeConvert;
+import com.trantanphong.dto.CustomerTypeDTO;
+import com.trantanphong.repository.CustomerTypeRepository;
+import com.trantanphong.service.CustomerTypeService;
+
+public class CustomerTypeServiceImplement implements CustomerTypeService{
+
+	@Autowired
+	private CustomerTypeRepository customerTypeRepository;
+	
+	@Autowired
+	private CustomerTypeConvert customerTypeConvert;
+	
+	@Override
+	public List<CustomerTypeDTO> getAllTypeCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CustomerTypeDTO save(CustomerTypeDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

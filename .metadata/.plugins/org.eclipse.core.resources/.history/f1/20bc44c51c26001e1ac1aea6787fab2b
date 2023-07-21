@@ -1,0 +1,38 @@
+package com.trantanphong.service.implement;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.trantanphong.convert.DiscountConvert;
+import com.trantanphong.dto.DiscountDTO;
+import com.trantanphong.entity.Discount;
+import com.trantanphong.repository.DiscountRepository;
+import com.trantanphong.service.DiscountService;
+
+@Service
+public class DiscountServiceImplement implements DiscountService{
+	@Autowired
+	private DiscountRepository discountRepository;
+	@Autowired
+	private DiscountConvert discountConvert;
+	@Override
+	public List<DiscountDTO> getAllDiscount() {
+		// TODO Auto-generated method stub
+		List<DiscountDTO> discountDTOs = new ArrayList<DiscountDTO>();
+		List<Discount> discounts = discountRepository.findAll();
+		for (Discount discount : discounts) {
+			discountDTOs.add(discountConvert.toDTO(discount));
+		}
+		return discountDTOs;
+	}
+	@Override
+	public DiscountDTO save(DiscountDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

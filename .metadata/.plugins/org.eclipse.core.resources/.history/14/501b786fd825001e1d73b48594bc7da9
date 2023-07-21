@@ -1,0 +1,12 @@
+package com.trantanphong.service;
+
+import java.util.List;
+
+import com.trantanphong.dto.ProductDTO;
+import com.trantanphong.entity.Product;
+
+public interface ProductService {
+	List<ProductDTO> getAllProduct();
+	ProductDTO save(ProductDTO newDTO);
+	ProductDTO delete(Long id);
+}

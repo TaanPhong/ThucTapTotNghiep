@@ -1,0 +1,6 @@
+package com.trantanphong.dto;
+
+public class PromotionDTO {
+	private Long id;
+	private String description;
+}

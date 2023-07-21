@@ -1,0 +1,38 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.GoodReceiptNoteConvert;
+import com.trantanphong.dto.GoodReceiptNoteDTO;
+import com.trantanphong.repository.GoodReceiptNoteRepository;
+import com.trantanphong.service.GoodReceiptNoteService;
+
+public class GoodReceiptNoteServiceImplement implements GoodReceiptNoteService{
+
+	@Autowired
+	private GoodReceiptNoteRepository goodReceiptNoteRepository;
+	
+	@Autowired
+	private GoodReceiptNoteConvert goodReceiptNoteConvert;
+	
+	@Override
+	public List<GoodReceiptNoteDTO> getAllReceipt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public GoodReceiptNoteDTO save(GoodReceiptNoteDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

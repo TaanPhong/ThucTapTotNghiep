@@ -1,0 +1,38 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.CommentConvert;
+import com.trantanphong.dto.CommentDTO;
+import com.trantanphong.repository.CommentRepository;
+import com.trantanphong.service.CommentService;
+
+public class CommentServiceImplement implements CommentService{
+
+	@Autowired
+	private CommentRepository commentRepository;
+	
+	@Autowired
+	private CommentConvert commentConvert;
+	
+	@Override
+	public List<CommentDTO> getAllCComment() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CommentDTO save(CommentDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

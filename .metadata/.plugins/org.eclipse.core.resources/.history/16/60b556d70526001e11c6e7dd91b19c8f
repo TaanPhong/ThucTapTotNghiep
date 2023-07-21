@@ -1,0 +1,5 @@
+package com.trantanphong.dto;
+
+public class ReceiptDetailDTO {
+
+}

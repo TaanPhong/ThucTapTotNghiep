@@ -1,0 +1,17 @@
+package com.trantanphong.convert;
+
+import com.trantanphong.dto.PromotionDetailDTO;
+import com.trantanphong.entity.PromotionDetail;
+import com.trantanphong.entity.PromotionDetailKey;
+
+public class PromotionDetailConvert {
+	public PromotionDetail toEntity(PromotionDetailDTO dto) {
+		PromotionDetail entity = new PromotionDetail();
+		entity.setDateEnd(dto.getDateEnd());
+		entity.setDateStart(dto.getDateStart());
+		entity.setPresent(dto.getPresent());
+		PromotionDetailKey key = new PromotionDetailKey();
+		key.setProductId(dto.getProductId());
+		key.setPromotionId(dto.getPromotionId());
+	}
+}

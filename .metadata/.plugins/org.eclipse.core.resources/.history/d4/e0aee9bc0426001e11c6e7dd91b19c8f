@@ -1,0 +1,8 @@
+package com.trantanphong.dto;
+
+
+public class GoodReceiptNoteDTO {
+	private int id;
+	private String dateFound;
+	private long totalMoney;
+}

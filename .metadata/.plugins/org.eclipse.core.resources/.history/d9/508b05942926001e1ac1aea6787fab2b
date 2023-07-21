@@ -1,0 +1,37 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.StatusOrderConvert;
+import com.trantanphong.dto.StatusOrderDTO;
+import com.trantanphong.repository.StatusOrderRepository;
+import com.trantanphong.service.StatusOrderService;
+
+public class StatusOrderServiceImplement implements StatusOrderService{
+
+	@Autowired
+	private StatusOrderRepository statusOrderRepository;
+	@Autowired
+	private StatusOrderConvert statusOrderConvert;
+	
+	@Override
+	public List<StatusOrderDTO> getAllStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public StatusOrderDTO save(StatusOrderDTO newDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

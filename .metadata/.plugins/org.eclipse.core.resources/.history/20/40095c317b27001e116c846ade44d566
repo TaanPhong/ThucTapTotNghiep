@@ -1,0 +1,21 @@
+package com.trantanphong.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.trantanphong.dto.StaffDTO;
+import com.trantanphong.service.StaffService;
+
+@RestController
+public class AdminStaffController {
+	@Autowired
+	private StaffService staffService;
+	
+	@GetMapping("/admin/staff")
+	public List<StaffDTO> getAllStaffAdmin(){
+		return staffService.getAllSatff();
+	}
+}

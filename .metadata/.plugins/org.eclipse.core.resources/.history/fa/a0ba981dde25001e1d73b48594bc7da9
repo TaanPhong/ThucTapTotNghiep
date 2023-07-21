@@ -1,0 +1,70 @@
+package com.trantanphong.service.implement;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.trantanphong.convert.ProductConvert;
+import com.trantanphong.dto.ProductDTO;
+import com.trantanphong.entity.Product;
+import com.trantanphong.repository.BrandRepository;
+import com.trantanphong.repository.ProductRepository;
+import com.trantanphong.repository.TypeProductRepository;
+import com.trantanphong.service.ProductService;
+
+@Service
+public class ProductServiceImplement implements ProductService {
+
+	@Autowired
+	private ProductRepository productRepository;
+
+	@Autowired
+	private TypeProductRepository typeProductRepository;
+	
+	
+	@Autowired
+	private BrandRepository brandRepository;
+	
+	@Autowired
+	private ProductConvert productConvert;
+	
+	@Override
+	public List<ProductDTO> getAllProduct() {
+		// TODO Auto-generated method stub
+		List<Product> products = productRepository.findAll();
+		List<ProductDTO> productDTOs = new ArrayList<ProductDTO>();
+		int length = products.size();
+		for(int i = 0; i < length; i++)
+		{
+			productDTOs.add(productConvert.toDTO(products.get(i)));
+		}
+		return productDTOs;
+	}
+
+	@Override
+	public ProductDTO save(ProductDTO newDTO) {
+		Product newEntity = productConvert.toEntity(newDTO);
+		return productConvert.toDTO(productRepository.save(newEntity));
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public ProductDTO findByID(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductDTO> getProductByTypeCode(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

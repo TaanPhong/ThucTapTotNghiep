@@ -1,0 +1,48 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.CustomerDTO;
+import com.trantanphong.entity.Customer;
+
+@Component
+public class CustomerConvert {
+	public Customer toEnity(CustomerDTO dto)
+	{
+		Customer entity = new Customer();
+		entity.setId(dto.getId());
+		entity.setDayOfBirth(dto.getDayOfBirth());
+		entity.setEmail(dto.getEmail());
+		entity.setFirstName(dto.getFirstName());
+		entity.setLastName(dto.getLastName());
+		entity.setLocation(dto.getLocation());
+		entity.setNumberPhone(dto.getNumberPhone());
+		return entity;
+	}
+	
+	public Customer toEnity(CustomerDTO dto, Customer entity)
+	{
+		entity.setId(dto.getId());
+		entity.setDayOfBirth(dto.getDayOfBirth());
+		entity.setEmail(dto.getEmail());
+		entity.setFirstName(dto.getFirstName());
+		entity.setLastName(dto.getLastName());
+		entity.setLocation(dto.getLocation());
+		entity.setNumberPhone(dto.getNumberPhone());
+		return entity;
+	}
+	
+	public CustomerDTO toDTO(Customer entity)
+	{
+		CustomerDTO dto = new CustomerDTO();
+		dto.setId(entity.getId());
+		dto.setDayOfBirth(entity.getDayOfBirth());
+		dto.setEmail(entity.getEmail());
+		dto.setFirstName(entity.getFirstName());
+		dto.setLastName(entity.getLastName());
+		dto.setLocation(entity.getLocation());
+		dto.setNumberPhone(entity.getNumberPhone());
+		dto.setFullname(entity.getFirstName() + " " + entity.getLastName());
+		return dto;
+	}
+}

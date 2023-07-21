@@ -1,0 +1,37 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.TheOrderConvert;
+import com.trantanphong.dto.TheOrderDTO;
+import com.trantanphong.repository.TheOrderRepository;
+import com.trantanphong.service.TheOrderService;
+
+public class TheOrderServiceImplement implements TheOrderService{
+
+	@Autowired
+	private TheOrderRepository theOrderRepository;
+	@Autowired
+	private TheOrderConvert theOrderConvert;
+	
+	@Override
+	public List<TheOrderDTO> getAllTheOrder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TheOrderDTO save(TheOrderDTO newDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

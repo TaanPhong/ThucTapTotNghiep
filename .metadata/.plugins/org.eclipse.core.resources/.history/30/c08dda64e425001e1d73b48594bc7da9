@@ -1,0 +1,40 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.TypeProductConvent;
+import com.trantanphong.dto.TypeProductDTO;
+import com.trantanphong.entity.TypeProduct;
+import com.trantanphong.repository.TypeProductRepository;
+import com.trantanphong.service.TypeProductService;
+
+public class TypeProductServiceImplement implements TypeProductService{
+
+	@Autowired
+	private TypeProductRepository typeProductRepository;
+	
+	@Autowired
+	private TypeProductConvent typeProductConvent;
+	
+	@Override
+	public List<TypeProductService> getAllTypeProduct() {
+		// TODO Auto-generated method stub
+		List<TypeProduct> typeProducts = 
+		return null;
+	}
+
+	@Override
+	public TypeProductDTO save(TypeProductDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

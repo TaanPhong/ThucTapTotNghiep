@@ -1,0 +1,18 @@
+package com.trantanphong.convert;
+
+import com.trantanphong.dto.PictureProductDTO;
+import com.trantanphong.entity.PictureProduct;
+
+public class PrictureProductConvent {
+	public PictureProduct toEntity(PictureProductDTO dto) {
+		PictureProduct entity = new PictureProduct();
+		entity.setId(dto.getId());
+		entity.setUrl(dto.getUrl());
+		return entity;
+	}
+	public PictureProduct toEntity(PictureProductDTO dto, PictureProduct entity) {
+		entity.setId(dto.getId());
+		entity.setUrl(dto.getUrl());
+		return entity;
+	}
+}

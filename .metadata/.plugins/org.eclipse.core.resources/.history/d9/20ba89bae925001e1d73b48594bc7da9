@@ -1,0 +1,28 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import com.trantanphong.dto.CustomerDTO;
+import com.trantanphong.service.CustomerService;
+
+public class CustomerServiceImplement implements CustomerService{
+
+	@Override
+	public List<CustomerDTO> getAllCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CustomerDTO save(CustomerDTO customerDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,31 @@
+package com.trantanphong.controller;
+
+import java.util.List;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import com.trantanphong.dto.ProductDTO;
+import com.trantanphong.service.ProductService;
+
+@RestController
+public class AdminController {
+	@Autowired
+	private ProductService productService;
+	private org.slf4j.Logger logger = LoggerFactory.getLogger(AdminController.class);
+
+	@GetMapping("/admin/product")
+	public List<ProductDTO> getAllProductAdmin() {
+		return productService.getAllProduct();
+	}
+	
+	@PostMapping("/admin/product")
+	public ProductDTO(@RequestBody ProductDTO model) {
+		return productService.save(model);
+	}
+	
+}

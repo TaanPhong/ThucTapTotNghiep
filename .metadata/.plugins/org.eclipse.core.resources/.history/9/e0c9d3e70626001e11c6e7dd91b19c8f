@@ -1,0 +1,9 @@
+package com.trantanphong.dto;
+
+public class TheOrderDetailDTO {
+	private Long theOrderId;
+	private Long productId;
+	private int numberOf;
+	private int price;
+
+}

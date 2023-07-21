@@ -1,0 +1,21 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.TheOrderDetailDTO;
+import com.trantanphong.entity.TheOrderDetail;
+import com.trantanphong.entity.TheOrderDetailKey;
+
+@Component
+public class TheOrderDetailConvert {
+	public TheOrderDetail toEntity(TheOrderDetailDTO dto) {
+		TheOrderDetail entity = new TheOrderDetail();
+		entity.setNumberOf(dto.getNumberOf());
+		entity.setPrice(dto.getPrice());
+		TheOrderDetailKey key = new TheOrderDetailKey();
+		key.setProductId(dto.getProductId());
+		key.setTheOrderId(dto.getTheOrderId());
+		entity.setId(key);
+		return entity;
+	}
+}

@@ -1,0 +1,37 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.StaffConvert;
+import com.trantanphong.dto.StaffDTO;
+import com.trantanphong.repository.StaffRepository;
+import com.trantanphong.service.StaffService;
+
+public class StaffServiceImplement implements StaffService{
+
+	@Autowired
+	private StaffRepository staffRepository;
+	@Autowired
+	private StaffConvert staffConvert;
+	
+	@Override
+	public List<StaffDTO> getAllSatff() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public StaffDTO save(StaffDTO newDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

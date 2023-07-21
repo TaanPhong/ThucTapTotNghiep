@@ -1,0 +1,6 @@
+package com.trantanphong.dto;
+
+public class StatusOrderDTO {
+	private Long id;
+	private String nameStatus;
+}

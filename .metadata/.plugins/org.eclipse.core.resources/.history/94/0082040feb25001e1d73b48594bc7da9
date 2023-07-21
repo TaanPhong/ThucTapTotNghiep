@@ -1,0 +1,31 @@
+package com.trantanphong.convert;
+
+import org.springframework.stereotype.Component;
+
+import com.trantanphong.dto.BrandDTO;
+import com.trantanphong.dto.CustomerTypeDTO;
+import com.trantanphong.entity.Brand;
+import com.trantanphong.entity.CustomerType;
+
+@Component
+public class CustomerTypeConvert {
+	public CustomerType toEntity(CustomerTypeDTO dto) {
+		CustomerType entity = new CustomerType();
+		entity.setId(dto.getId());
+		entity.setNameType(dto.getNameType());
+		return entity;
+	}
+
+	public CustomerType toEntity(CustomerTypeDTO dto, CustomerType entity) {
+		entity.setId(dto.getId());
+		entity.setNameType(dto.getNameType());
+		return entity;
+	}
+
+	public CustomerTypeDTO toDTO(CustomerType entity) {
+		CustomerTypeDTO dto = new CustomerTypeDTO();
+		dto.setId(entity.getId());
+		dto.setNameType(entity.getNameType());
+		return dto;
+	}
+}

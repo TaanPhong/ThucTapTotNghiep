@@ -1,0 +1,35 @@
+package com.trantanphong.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.dto.BrandDTO;
+import com.trantanphong.repository.BrandRepository;
+import com.trantanphong.service.BrandService;
+
+public class BrandServiceImplement implements BrandService{
+
+	
+	@Autowired
+	private BrandRepository brandRepository;
+	
+	@Override
+	public BrandDTO save(BrandDTO brandDTO) {
+		Brand newEntity = 
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<BrandDTO> brandDTOs() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.trantanphong.service.implement;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.trantanphong.convert.AuthorizedDetailConvert;
+import com.trantanphong.dto.AuthorizedDetailDTO;
+import com.trantanphong.entity.AuthorizedDetail;
+import com.trantanphong.repository.AuthorizedDetailRepository;
+import com.trantanphong.service.AuthorizedDetailService;
+
+public class AuthorizedDetailServiceImplement implements AuthorizedDetailService{
+
+	@Autowired
+	private AuthorizedDetailRepository authorizedDetailRepository;
+	@Autowired
+	private AuthorizedDetailConvert authorizedDetailConvert;
+	
+	@Override
+	public List<AuthorizedDetail> getAllAuthorizedDetails() {
+		// TODO Auto-generated method stub
+		List<AuthorizedDetailDTO> authorizedDetailDTOs = new ArrayList<AuthorizedDetailDTO>();
+		List<AuthorizedDetail> authorizedDetails = authorizedDetailRepository.findAll();
+		return null;
+	}
+
+	@Override
+	public AuthorizedDetailDTO save(AuthorizedDetailDTO newDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
